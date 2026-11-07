@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\geometry{top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{cite}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{Universidad Técnica Estatal de Quevedo}} \\[0.2cm]
+    {\large \textbf{Ingeniería de Software}} \\[0.5cm]
+    {\Large \textbf{Clasificación y Justificación de Enunciados (E01 - E20)}} \\[0.3cm]
+    \textbf{Autor:} Frixon Moran \\
+    \textbf{Tarea:} GA-TL-01 - FORM - Identificación y clasificación de tipos de requisitos
+ \\
+    
+\end{center}
+
+\section{Clasificación y Justificación de los Enunciados}
+
+Esta categorización permite establecer una jerarquía de desarrollo clara, garantizando que los componentes críticos de persistencia, seguridad y concurrencia sean atendidos en las fases iniciales del ciclo de vida del software, mientras que los elementos de optimización y simulación se integran en etapas posteriores. A continuación, se detalla la clasificación sistemática que rige el diseño e implementación del sistema.
+
+\begin{table}[htbp]
+\centering
+\caption{Clasificación y priorización de enunciados (E01--E20).}
+\label{tab:clasificacion_enunciados}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|p{4.5cm}|c|c|p{5.5cm}|}
+\hline
+\textbf{ID} & \textbf{Enunciado / Requerimiento} & \textbf{Tipo} & \textbf{Prioridad} & \textbf{Justificación Técnica} \\ \hline
+E01 & Gestión y registro de usuarios & Funcional & Must Have & Autentica y diferencia roles en el sistema. \\ \hline
+E02 & Control de acceso basado en roles (RBAC) & Seguridad & Must Have & Restringe operaciones según privilegios del usuario. \\ \hline
+E03 & Registro y almacenamiento de transacciones & Funcional & Must Have & Asegura la trazabilidad en la base de datos relacional. \\ \hline
+E04 & Validación de esquemas e integridad & Funcional & Must Have & Evita anomalías con llaves y restricciones CHECK. \\ \hline
+E05 & Optimización de consultas con índices & No Funcional & Should Have & Reduce tiempos de respuesta en lecturas y reportes. \\ \hline
+E06 & Generación de reportes operativos & Funcional & Should Have & Facilita la toma de decisiones con datos tabulares. \\ \hline
+E07 & Interfaz basada en principios heurísticos & No Funcional & Should Have & Aplica heurísticas de usabilidad de Nielsen. \\ \hline
+E08 & Auditoría y registro de logs críticos & Seguridad & Should Have & Rastrae modificaciones en registros sensibles. \\ \hline
+E09 & Consistencia transaccional (ACID) & No Funcional & Must Have & Evita estados inconsistentes ante fallos. \\ \hline
+E10 & Escalabilidad modular de arquitectura & No Funcional & Could Have & Facilita agregar módulos sin afectar el núcleo. \\ \hline
+E11 & Control de concurrencia en accesos & No Funcional & Must Have & Evita condiciones de carrera con bloqueos por fila. \\ \hline
+E12 & Respaldo y exportación de base de datos & Operativo & Should Have & Garantiza disponibilidad ante fallas físicas o lógicas. \\ \hline
+E13 & Documentación técnica de API y esquemas & No Funcional & Must Have & Facilita mantenibilidad y auditorías de código. \\ \hline
+E14 & Pruebas unitarias e integración & No Funcional & Should Have & Valida componentes tras cambios en el código. \\ \hline
+E15 & Control de versiones y trazabilidad en Git & No Funcional & Must Have & Mantiene historial de trabajo colaborativo. \\ \hline
+E16 & Manejo centralizado de excepciones & No Funcional & Must Have & Previene caídas abruptas y notifica al usuario. \\ \hline
+E17 & Compatibilidad multiplataforma & No Funcional & Could Have & Asegura ejecución uniforme en varios SO. \\ \hline
+E18 & Encriptación de datos en tránsito & Seguridad & Must Have & Protege información confidencial en la red. \\ \hline
+E19 & Simulación matemática de procesos & Funcional & Could Have & Evalúa escenarios con diagramas de Forrester. \\ \hline
+E20 & Cumplimiento ético y privacidad de datos & Legal/Ético & Must Have & Previene exposición de datos de terceros. \ \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\section{Declaración del Uso de Inteligencia Artificial}
+De conformidad con las normas de la asignatura, se declara el uso de herramientas de inteligencia artificial bajo los siguientes parámetros:
+\begin{itemize}
+    \item \textbf{Herramienta:} Gemini (Asistente de IA).
+    \item \textbf{Versión:} Modelo 2026.
+    \item \textbf{Propósito:} Apoyo en la estructuración de tablas, redacción formal y sintaxis en código LaTeX para el apartado de enunciados.
+    \item \textbf{Verificación:} Cada elemento y justificación técnica fue revisado, validado y adaptado manualmente para garantizar la coherencia con los requerimientos del proyecto.
+\end{itemize}
+
+
+
+\end{document}
