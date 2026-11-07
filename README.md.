@@ -1,0 +1,11 @@
+# Repositorio de la Asignatura - ISR401
+
+##  Especificaciones de Compilación
+- **Compilador recomendado:** pdfLaTeX 
+- **Archivo principal:** `main.tex`
+- **Orden de comandos para compilar localmente:**
+  1. `pdflatex main.tex`
+  2. `bibtex main` 
+  3. `pdflatex main.tex`
+  4. `pdflatex main.tex`
+- **Paquetes necesarios:** `graphicx`, `tabularx`, `geometry`, `babel`, `cite`.
